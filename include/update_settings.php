@@ -15,7 +15,7 @@ global $wpdb;
 if(isset($_POST['update_setting_data'])){
    $posts_per_page_update = sanitize_text_field($_POST['slider_img_per_page']);
   // echo $posts_per_page_update; 
-   $border_color = sanitize_text_field($_POST['border_color']);
+   $border_color = sanitize_hex_color($_POST['border_color']);
    //echo $border_color;
    $timer_duration = sanitize_text_field($_POST['Slider_Timer']);
    //echo $timer_duration;
