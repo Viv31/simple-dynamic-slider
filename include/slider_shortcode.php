@@ -1,5 +1,8 @@
 <?php
-   function sliderShortcode(){
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+  
+if(!function_exists('DIS_sliderShortcode')){
+function DIS_sliderShortcode(){
 
     global $wpdb;
    $update_positions_and_posts ="SELECT * FROM Slider_settings";
@@ -89,8 +92,8 @@
 /* The dots/bullets/indicators */
 .Slider_dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -145,7 +148,7 @@
    //echo $border_color;
 
 $args = array(
-   'post_type' => 'simple-slider', //  custom post type name 
+   'post_type' => 'dynamic-Image-Slider', //  custom post type name 
    'posts_per_page' => $postperpage, // no of post per page 
    'order_by' => 'date', // Some optional sorting
    'order' => 'ASC', 
@@ -213,4 +216,5 @@ function simple_Slider() {
 	<?php
 
 }
-add_shortcode('Simple-Slider','sliderShortcode'); //First aparameter is slider name and second parameter is function  name
+}
+add_shortcode('Dynamic-Image-Slider','DIS_sliderShortcode'); //First aparameter is slider name and second parameter is function  name

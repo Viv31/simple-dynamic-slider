@@ -1,4 +1,5 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $wpdb;
    $select_time_and_post_for_update ="SELECT * FROM slider_settings WHERE id ='1'";
    $Post_Setting_data_for_update = $wpdb->get_results($select_time_and_post_for_update);  

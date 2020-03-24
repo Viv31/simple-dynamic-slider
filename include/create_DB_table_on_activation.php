@@ -1,4 +1,5 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     global $wpdb;
     	$table_name ='Slider_settings';
    	$charset_collate = $wpdb->get_charset_collate();

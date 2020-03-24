@@ -9,10 +9,10 @@
    */
 
 
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); //calling main plugin file
 
-$plugin = 'slider-plugin/index.php';
+$plugin = 'simple-dynamic-slider/index.php';
  /* Plugin directory path after plugin folder*/
  if (is_plugin_active($plugin))
             { 

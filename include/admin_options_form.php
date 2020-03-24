@@ -1,12 +1,16 @@
 <?php 
-add_action('admin_menu','slider_update_settings');
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+add_action('admin_menu','DIS_slider_update_settings');
 
-function slider_update_settings(){
+ function DIS_slider_update_settings(){
   //Callback function
   //Do not delete this function this is callback function for this admin options section
 }
 
-function Update_slider_settings(){
+if(!function_exists('DIS_slider_update_settings')){
+  
+
+function DIS_Update_slider_settings(){
   include_once('update_settings.php');
   ?>
 <style type="text/css">
@@ -65,6 +69,6 @@ function Update_slider_settings(){
 
   <?php
 }
-
+}
 
 ?>

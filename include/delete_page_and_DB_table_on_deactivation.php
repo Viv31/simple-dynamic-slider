@@ -1,6 +1,8 @@
 <?php
-
-function my_plugin_remove_database() {
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+ 
+if(!function_exists('DIS_my_plugin_remove_database')){
+	function DIS_my_plugin_remove_database() {
  global $wpdb;
      $drop_table_name ='slider_settings';
      $delete_table = "DROP TABLE IF EXISTS $drop_table_name";
@@ -8,6 +10,9 @@ function my_plugin_remove_database() {
      $wpdb->query($delete_table);
      delete_option("my_plugin_db_version");
 }
+
+}
+ 
  
 ?>
 

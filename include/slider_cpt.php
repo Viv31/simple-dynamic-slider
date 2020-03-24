@@ -1,10 +1,12 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 //Creating custom post type 
-function custom_post_type_slider(){
+if(!function_exists('DIS_custom_post_type_slider')){
+function DIS_custom_post_type_slider(){
 		register_post_type('simple-slider',
    		array(
    			'labels'=>array(
-   			'name'=>__('Simple Slider'),
+   			'name'=>__('Dynamic Iamge Slider'),
    			'Singular_name'=>__('slider')
    		),
    		'supports'=>array('title','editor','thumbnail'),
@@ -23,7 +25,5 @@ function custom_post_type_slider(){
        'Update_slider_settings' /*replace with your own function*/
    ); 
 }
-
-
-
- add_action('init','custom_post_type_slider');
+}
+add_action('init','DIS_custom_post_type_slider');
