@@ -1,16 +1,13 @@
 <?php 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit; 
 add_action('admin_menu','DIS_slider_update_settings');
 
- function DIS_slider_update_settings(){
+function DIS_slider_update_settings(){
   //Callback function
   //Do not delete this function this is callback function for this admin options section
 }
 
-if(!function_exists('DIS_slider_update_settings')){
-  
-
-function DIS_Update_slider_settings(){
+function Update_slider_settings(){
   include_once('update_settings.php');
   ?>
 <style type="text/css">
@@ -62,6 +59,7 @@ function DIS_Update_slider_settings(){
   <br>
   <label>Border Width(in pixels):</label>
   <input type="number" name="border_width" class="myinput" value="<?php echo $settingDataUpdate->border_width; ?>" required>
+  <input type="hidden" name="_nonce" value="<?php echo wp_create_nonce('update-settings') ?>">
 <br><br>
   <input type="submit" class="mybtn" name="update_setting_data"  value="Save setting">
 </form>
@@ -69,6 +67,6 @@ function DIS_Update_slider_settings(){
 
   <?php
 }
-}
+
 
 ?>

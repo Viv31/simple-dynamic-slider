@@ -23,7 +23,7 @@ include_once('include/slider_shortcode.php');
 include_once('include/slider_cpt.php');
 include_once('include/admin_options_form.php');
 include_once('include/delete_page_and_DB_table_on_deactivation.php');
-register_deactivation_hook( __FILE__, 'my_plugin_remove_database' ); 
+register_deactivation_hook( __FILE__, 'DIS_my_plugin_remove_database' ); 
 }
 
 
