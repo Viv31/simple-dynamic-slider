@@ -34,7 +34,7 @@ function DIS_sliderShortcode(){
   max-width: 100%;
   position: relative;
   margin: auto;
-  border:<?php echo $border_width.'px'; ?> solid <?php echo $border_color;?>;
+  border:<?php echo esc_html($border_width).'px'; ?> solid <?php echo esc_html($border_color);?>;
 }
 
 /* Hide the images by default */
@@ -190,7 +190,7 @@ $caption_text="Developed by vaibhav";
 
 <script type="text/javascript">
 	var slideIndex = 0;
-	var timer ='<?php echo $Slider_Timer ?>';
+	var timer ='<?php echo esc_html($Slider_Timer) ?>';
 simple_Slider();
 
 function simple_Slider() {

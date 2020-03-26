@@ -8,6 +8,7 @@ function DIS_slider_update_settings(){
 }
 
 function Update_slider_settings(){
+
   include_once('update_settings.php');
   ?>
 <style type="text/css">
@@ -51,14 +52,14 @@ function Update_slider_settings(){
 <h3 style="text-align: center;">Chnage Slider Settings</h3>
 <form action="" method="POST">
   <label>No of Slides to Show:</label>
-  <input type="number" name="slider_img_per_page" placeholder="Enter no of post" class="myinput" value="<?php echo $settingDataUpdate->slider_img_per_page; ?>" required><br>
+  <input type="number" name="slider_img_per_page" placeholder="Enter no of post" class="myinput" value="<?php echo esc_html($settingDataUpdate->slider_img_per_page); ?>" required><br>
    <label>Timer(in milliseconds):</label>
-  <input type="text" name="Slider_Timer" placeholder="Enter time for slider repeation" class="myinput" value="<?php echo $settingDataUpdate->Slider_Timer; ?>" required><br>
+  <input type="text" name="Slider_Timer" placeholder="Enter time for slider repeation" class="myinput" value="<?php echo esc_html($settingDataUpdate->Slider_Timer); ?>" required><br>
   <label>Border Color:</label>
-  <input type="color" name="border_color" class="myinput" value="<?php echo $settingDataUpdate->border_color; ?>" >
+  <input type="color" name="border_color" class="myinput" value="<?php echo esc_html($settingDataUpdate->border_color); ?>" >
   <br>
   <label>Border Width(in pixels):</label>
-  <input type="number" name="border_width" class="myinput" value="<?php echo $settingDataUpdate->border_width; ?>" required>
+  <input type="number" name="border_width" class="myinput" value="<?php echo esc_html($settingDataUpdate->border_width); ?>" required>
   <input type="hidden" name="_nonce" value="<?php echo wp_create_nonce('update-settings') ?>">
 <br><br>
   <input type="submit" class="mybtn" name="update_setting_data"  value="Save setting">
