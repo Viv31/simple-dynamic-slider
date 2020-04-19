@@ -2,7 +2,7 @@
 /**
    * Plugin Name: dynamic Image Slider 
    * Plugin URI:
-   * Description:A plugin for making Simple slider .
+   * Description:A plugin for making Simple slider add images in post type Set featured image section and  paste shortcode on your page where you want to show slider [Dynamic-Image-Slider] Shortcode   .
    * Version:1.0
    * Author:Vaibhav Gangrade
    * Author URI:
@@ -12,7 +12,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); //calling main plugin file
 
-$plugin = 'simple-dynamic-slider/index.php';
+$plugin = 'simple-dynamic-slider-master/index.php';
  /* Plugin directory path after plugin folder*/
  if (is_plugin_active($plugin))
             { 

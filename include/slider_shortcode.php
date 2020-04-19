@@ -92,7 +92,7 @@ function DIS_sliderShortcode(){
 /* The dots/bullets/indicators */
 .Slider_dot {
   cursor: pointer;
-  height: 10px;
+  /*height: 10px;*/
   width: 10px;
   margin: 0 2px;
   background-color: #bbb;
@@ -148,7 +148,7 @@ function DIS_sliderShortcode(){
    //echo $border_color;
 
 $args = array(
-   'post_type' => 'dynamic-Image-Slider', //  custom post type name 
+   'post_type' => 'simple-slider-image', //  custom post type name 
    'posts_per_page' => $postperpage, // no of post per page 
    'order_by' => 'date', // Some optional sorting
    'order' => 'ASC', 
@@ -156,7 +156,7 @@ $args = array(
    );
 ?>
 <?php
-$caption_text="Developed by vaibhav";
+//$caption_text="Developed by vaibhav";
                $data = get_posts($args);
                // print_r($data);
                // die;  

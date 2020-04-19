@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
        $slider_img_per_page = '10';
        $border_color = 'black';
        $Slider_Timer = '2000';
-       $border_width ='1';
+       $border_width ='0';
        
        
      $insert_setting =  $wpdb->insert($table_name, array(
